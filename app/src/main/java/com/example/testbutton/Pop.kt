@@ -3,6 +3,7 @@ package com.example.testbutton
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 class Pop : AppCompatActivity()  {
@@ -10,11 +11,13 @@ class Pop : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.side_menu)
 
+
         val btnuebersicht = findViewById<Button>(R.id.übersichts)
         btnuebersicht.setOnClickListener {
             val intent = Intent(this, Uebersicht::class.java)
             startActivity(intent)
         }
+
         val btnkategorie = findViewById<Button>(R.id.kategorie)
         btnkategorie.setOnClickListener {
             val intent = Intent(this, Kategorie::class.java)
@@ -79,4 +82,6 @@ class Pop : AppCompatActivity()  {
 
 
     }
+
+
 }

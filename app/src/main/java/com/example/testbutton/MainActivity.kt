@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        
+
+
+
         val buttonClick = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {
             val intent = Intent(this@MainActivity, Pop::class.java)

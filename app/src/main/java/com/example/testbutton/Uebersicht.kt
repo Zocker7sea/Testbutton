@@ -20,6 +20,8 @@ class Uebersicht : AppCompatActivity() {
             val intent = Intent(this, Uebersicht2::class.java)
             startActivity(intent)
         }
+
+
         //uebersicht
         val btnuebersicht = findViewById<Button>(R.id.übersichts)
         btnuebersicht.setOnClickListener {
