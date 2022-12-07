@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/plus"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="plus"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/minus"
+        android:icon="@drawable/ic_baseline_horizontal_rule_24"
+        android:title="minus"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="Übersicht"
+        android:id="@+id/Übersicht">
+        <menu>
+            <item
+                android:title="Regelmäßige Einnahmen"
+                android:id="@+id/RegelmäßigeEinnahmen"/>
+            <item
+                android:title="Regelmäßige Ausgaben"
+                android:id="@+id/RegelmäßigeAusgaben"/>
+        </menu>
+    </item>
+    <item
+        android:title="Kategorien"
+        android:id="@+id/Kategorien">
+        <menu>
+            <item
+                android:title="Erstellen"
+                android:id="@+id/Erstellen"/>
+            <item
+                android:title="Anzeigen"
+                android:id="@+id/Anzeigen"/>
+            <item
+                android:title="Löschen"
+                android:id="@+id/Löschen"/>
+        </menu>
+    </item>
+    <item
+        android:title="Einträge"
+        android:id="@+id/Einträge">
+        <menu>
+            <item
+                android:title="Anzeigen"
+                android:id="@+id/AnzeigenE"/>
+            <item
+                android:title="Suchen"
+                android:id="@+id/Suchen"/>
+        </menu>
+    </item>
+    <item
+        android:title="Sparziel"
+        android:id="@+id/Sparziel">
+        <menu>
+            <item
+                android:title="IDK"
+                android:id="@+id/IDK"/>
+        </menu>
+    </item>
+    <item
+        android:title="Währungsrechner"
+        android:id="@+id/Währungsrechner"
+        />
+    <item
+        android:title="Statistik"
+        android:id="@+id/Statistik" />
+    <item
+        android:title="Einstellungen"
+        android:id="@+id/Einstellungen" />
+
+
+
+</menu>
