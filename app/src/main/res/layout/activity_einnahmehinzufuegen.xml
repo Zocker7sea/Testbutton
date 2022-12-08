@@ -46,7 +46,7 @@
     <TextView
         android:id="@+id/textView11"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:text="Name *"
         android:textAlignment="center"
@@ -57,7 +57,7 @@
     <TextView
         android:id="@+id/textView12"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:text="Kategorie *"
@@ -69,7 +69,7 @@
     <TextView
         android:id="@+id/textView15"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:text="Währung"
@@ -81,7 +81,7 @@
     <TextView
         android:id="@+id/textView16"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:text="Beleg hinzufügen"
@@ -93,7 +93,7 @@
     <TextView
         android:id="@+id/textView13"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:text="Datum *"
@@ -105,7 +105,7 @@
     <TextView
         android:id="@+id/textView14"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:text="Betrag *"
@@ -117,7 +117,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
 
@@ -128,16 +128,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textedit"
+            android:id="@+id/texteditname"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="70dp"
             android:hint="Edeka"
-            android:textColorHint="#000000"
             android:inputType="text"
             android:paddingTop="0dp"
             android:selectAllOnFocus="true"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textStyle="bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -145,13 +145,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="5dp"
         app:hintAnimationEnabled="false"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText"
+        app:layout_constraintBottom_toTopOf="@+id/texteditbetrag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
@@ -159,23 +159,23 @@
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+            android:id="@+id/texteditbetrag"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:hint="10.50"
-            android:textColorHint="#000000"
             android:inputType="numberDecimal"
             android:paddingTop="0dp"
             android:selectAllOnFocus="false"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/texteditdatum"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="5dp"
@@ -187,21 +187,21 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:hint="15.12.2022"
-            android:textColorHint="#000000"
             android:inputType="date"
             android:paddingTop="0dp"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/texteditkategorie"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="5dp"
@@ -209,53 +209,55 @@
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/texteditdatum">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:hint="Lebensmittel"
-            android:textColorHint="#000000"
             android:inputType="text"
             android:paddingTop="0dp"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
+        android:id="@+id/texteditwaehrung"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
         app:hintAnimationEnabled="false"
         app:hintEnabled="false"
-        android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/texteditkategorie">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:hint="€"
-            android:textColorHint="#000000"
+            android:paddingTop="0dp"
+            android:textAlignment="center"
             android:textColor="#000000"
-            android:textStyle="bold"
-            android:paddingTop="0dp" />
+            android:textColorHint="#000000"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/texteditwaehrung"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <Button
@@ -263,7 +265,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="193dp"
         android:layout_height="78dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="32dp"
         android:text="Speichern"
         android:textColor="#000000"
         android:textSize="24sp"
