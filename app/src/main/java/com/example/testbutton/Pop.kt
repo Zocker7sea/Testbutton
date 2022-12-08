@@ -26,6 +26,7 @@ class Pop : AppCompatActivity()  {
 
         val btneintraege = findViewById<Button>(R.id.eintraege)
         btneintraege.setOnClickListener {
+            //val intent = Intent(this, Eintraege::class.java)
             val intent = Intent(this, Eintraege::class.java)
             startActivity(intent)
         }

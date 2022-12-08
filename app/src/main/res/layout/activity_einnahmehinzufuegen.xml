@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
-        android:text="Einnahme Hinzufuegen"
+        android:text="Einnahme Hinzufügen"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -249,7 +249,8 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="300dp"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="301dp"
         android:layout_height="70dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
@@ -274,7 +275,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintVertical_bias="0.120000005"
+        android:onClick="saveEinnahme"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
