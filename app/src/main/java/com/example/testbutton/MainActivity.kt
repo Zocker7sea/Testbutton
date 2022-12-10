@@ -20,11 +20,10 @@ import android.widget.Toast;
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        val DB : ConnectionHelper= ConnectionHelper(this)
 
         val buttonClick = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {

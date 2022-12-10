@@ -1,23 +1,51 @@
 package com.example.testbutton
 
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ListView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlin.math.E
 
 class Eintraege1 : AppCompatActivity() {
     //private var eintraegeListView: ListView? = null
+
+
+    var DB : ConnectionHelper = ConnectionHelper(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eintraege1)
+
         val buttonClick  = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {
             val intent = Intent(this,Eintraege::class.java)
             startActivity(intent)
+        }
+        val viewdata = findViewById<Button>(R.id.view)
+        viewdata.setOnClickListener {
+            val res : Cursor = DB.getdata()
+            if(res.count == 0) {
+                Toast.makeText(this,"No ENtry Exists",Toast.LENGTH_SHORT).show()
+            }
+            val buffer : StringBuffer = StringBuffer()
+            while (res.moveToNext()) {
+                buffer.append("Name :" + res.getString(0)+"\n")
+                buffer.append("Betrag :" + res.getString(1)+"\n")
+                buffer.append("Datum :" + res.getString(2)+"\n")
+                buffer.append("Kategorie :" + res.getString(3)+"\n")
+                buffer.append("Waehrung :" + res.getString(4)+"\n")
+            }
+            val builder : AlertDialog.Builder = AlertDialog.Builder(this)
+            builder.setCancelable(true)
+            builder.setTitle("User Entry")
+            builder.setMessage(buffer.toString())
+            builder.show()
         }
 //        initWidgets()
 //        loadFromDBToMemory()

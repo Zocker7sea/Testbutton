@@ -173,7 +173,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/texteditdatum"
+        android:id="@+id/texteditdatumLayout"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginStart="5dp"
@@ -186,6 +186,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/texteditdatum"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint="15.12.2022"
@@ -199,7 +200,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/texteditkategorie"
+        android:id="@+id/texteditkategorieLayout"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginStart="5dp"
@@ -209,9 +210,10 @@
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/texteditdatum">
+        app:layout_constraintTop_toBottomOf="@+id/texteditdatumLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/texteditkategorie"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint="Lebensmittel"
@@ -224,7 +226,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/texteditwaehrung"
+        android:id="@+id/texteditwaehrungLayout"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginStart="5dp"
@@ -234,9 +236,10 @@
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/texteditkategorie">
+        app:layout_constraintTop_toBottomOf="@+id/texteditkategorieLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/texteditwaehrung"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint="€"
@@ -258,11 +261,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/texteditwaehrung"
+        app:layout_constraintTop_toBottomOf="@+id/texteditwaehrungLayout"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonsave"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="193dp"
         android:layout_height="78dp"
