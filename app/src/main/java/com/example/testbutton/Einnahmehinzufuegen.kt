@@ -24,11 +24,11 @@ class Einnahmehinzufuegen : AppCompatActivity() {
         setContentView(R.layout.activity_einnahmehinzufuegen)
         val name : EditText = findViewById(R.id.texteditname)
         val betrag : EditText= findViewById(R.id.texteditbetrag)
-        val  datum : EditText= findViewById(R.id.texteditdatum)
+        val datum : EditText= findViewById(R.id.texteditdatum)
         val kategorie : EditText= findViewById(R.id.texteditkategorie)
         val waehrung : EditText= findViewById(R.id.texteditwaehrung)
         val insertbtn : Button = findViewById(R.id.buttonsave)
-        val DB : ConnectionHelper= ConnectionHelper(this)
+        val DB : ConnectionHelper = ConnectionHelper(this)
         val buttonClick = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {
             val intent = Intent(this, Pop::class.java)
