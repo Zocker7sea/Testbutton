@@ -259,7 +259,7 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        style="@android:style/Widget.DeviceDefault.ImageButton"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="301dp"
         android:layout_height="70dp"
         android:layout_marginStart="5dp"
