@@ -45,13 +45,33 @@ class Einnahmehinzufuegen : AppCompatActivity() {
             val datumTXT : String = datum.text.toString()
             val kategorieTXT : String = kategorie.text.toString()
             val waehrungTXT : String = waehrung.text.toString()
-
             val checkinsertdata : Boolean = DB.insertEintrag(nameTXT,betragTXT,datumTXT,kategorieTXT,waehrungTXT)
-            if(checkinsertdata) {
-                Toast.makeText(this,"New Entry Inserted",Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this,"New Entry noy Inserted",Toast.LENGTH_SHORT).show()
+            if(nameTXT.length > 20){
+                name.setError("Name ist lang !!!")
             }
+            else if(nameTXT.isEmpty()){
+                name.setError("Feld muss gefüllt !!!")
+            }
+            //else if(betragTXT.isEmpty()){
+             //   datum.setError("Feld muss gefüllt !!!")
+            //}
+            else if(datumTXT.isEmpty()){
+                datum.setError("Feld muss gefüllt !!!")
+            }
+            else if(kategorieTXT.isEmpty()){
+                kategorie.setError("Feld muss gefüllt !!!")
+            } else if(kategorieTXT.length > 20){
+                kategorie.setError("Name ist lang !!!")
+            }
+
+            else {
+                if(checkinsertdata) {
+                    Toast.makeText(this,"New Entry Inserted",Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this,"New Entry noy Inserted",Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
 
     }
