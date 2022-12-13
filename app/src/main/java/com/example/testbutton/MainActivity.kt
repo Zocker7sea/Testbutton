@@ -1,21 +1,9 @@
 package com.example.testbutton
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.app.Activity;
 import android.content.Intent
-import android.view.Menu;
-import android.view.MenuInflater
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener
-import android.view.View;
-import android.widget.Button
 import android.widget.ImageButton;
-import android.widget.PopupMenu
-import android.widget.Toast;
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonClick = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {
-            val intent = Intent(this@MainActivity, Pop::class.java)
+            val intent = Intent(this, Pop::class.java)
             startActivity(intent)
         }
 

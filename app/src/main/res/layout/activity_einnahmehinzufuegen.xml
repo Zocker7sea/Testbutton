@@ -247,7 +247,8 @@
             android:textAlignment="center"
             android:textColor="#000000"
             android:textColorHint="#000000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="€" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton

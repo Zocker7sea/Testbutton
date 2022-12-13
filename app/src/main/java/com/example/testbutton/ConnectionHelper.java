@@ -16,7 +16,12 @@ public class ConnectionHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("create Table Eintrag(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT, betrag FLOAT, datum DATE, kategorie TEXT, währung TEXT)");
+        DB.execSQL("create Table Eintrag(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                " name TEXT," +
+                " betrag FLOAT," +
+                " datum DATE," +
+                " kategorie TEXT," +
+                " währung TEXT)");
     }
 
     @Override
@@ -65,4 +70,9 @@ public class ConnectionHelper extends SQLiteOpenHelper {
         return cursor;
 
     }
+//    public Cursor getDatum() {
+//        SQLiteDatabase DB = this.getWritableDatabase();
+//        Cursor cursor = DB.rawQuery("Select datum from Eintrag",null);
+//        return cursor;
+//    }
 }

@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.sql.Date
 
 
 class Einnahmehinzufuegen : AppCompatActivity() {
@@ -22,18 +23,22 @@ class Einnahmehinzufuegen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_einnahmehinzufuegen)
+
         val name : EditText = findViewById(R.id.texteditname)
         val betrag : EditText= findViewById(R.id.texteditbetrag)
         val datum : EditText= findViewById(R.id.texteditdatum)
         val kategorie : EditText= findViewById(R.id.texteditkategorie)
         val waehrung : EditText= findViewById(R.id.texteditwaehrung)
-        val insertbtn : Button = findViewById(R.id.buttonsave)
+
+
         val DB : ConnectionHelper = ConnectionHelper(this)
+
         val buttonClick = findViewById<ImageButton>(R.id.imageButton)
         buttonClick.setOnClickListener {
             val intent = Intent(this, Pop::class.java)
             startActivity(intent)
         }
+        val insertbtn : Button = findViewById(R.id.buttonsave)
         insertbtn.setOnClickListener {
             val nameTXT : String = name.text.toString()
             val betragTXT : Float = getFloat(betrag.text.toString())
@@ -121,6 +126,7 @@ class Einnahmehinzufuegen : AppCompatActivity() {
 //            null
 //        }
 //    }
+
 fun getFloat(intString: String): Float {
     var res : Float = 0f
     try {
